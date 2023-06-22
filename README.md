@@ -65,3 +65,10 @@ Really great to haves
 
 
 - Linking trails ive done with a trail map.
+
+
+
+
+ISSUES I HAD ALONG THE WAY
+
+
