@@ -6,8 +6,9 @@
     <title>PNWanderer</title>
 </head>
 <body>
+    <h1>PNWanderer</h1>
     {% include 'pnwanderer/_navbar.html' %}
-    <h1>Posts</h1>
+    {% comment %} add posts to homepage {% endcomment %}
 {% for post in blog_posts %}
 <div>
     <h2>{{ post.title }}</h2>
