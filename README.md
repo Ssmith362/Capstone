@@ -29,12 +29,13 @@ trail maps
 
 TIME LINE FOR PROJECT
 
--By the end of week one I would like to have a functioning home page with a post.
+-By the end of week one I would like to have a functioning home page with a post. The user authentication done, so the user can login, logout, or sign-up. Have A navigation bar. Have some styling done on all the pages.
 
 -By the end of week two I would like to have a page for an about me. 
 I would like to have posts on my blogs that have links to take you to pages that tell you more about the hikes.
+I would like users to be able to comment or save a post. 
 
--By week three I would like to have a navigation bar that can take you to some of the pages about hikes, and the about me.
+-By week three 
 I would like everything to be styled to look nice. 
 
 -By week four I would like to have a search bar to look for hikes. 
