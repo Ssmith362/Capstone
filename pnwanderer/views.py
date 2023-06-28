@@ -9,3 +9,6 @@ def home(request):
 
 def about_me(request):
     return render(request, 'pnwanderer/aboutme.html')
+
+def detail(request):
+    return render(request, 'pnwanderer/detail.html')
