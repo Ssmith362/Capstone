@@ -1,15 +1,10 @@
-{% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me</title>
-    <link rel="stylesheet" href="{% static 'pnwanderer/styles.css' %}">
-</head>
-<body>
-    {% include 'pnwanderer/_navbar.html' %}
-    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. In ullam nulla quam nemo? Voluptas quibusdam voluptatum dolores fuga. Voluptas minus, alias est exercitationem in accusamus odit deleniti quos facere. Quam.</p>
-    
-</body>
-</html>
+{% extends 'pnwanderer/base.html' %}
+
+{% block title %}
+Aboiut Me
+{% endblock %}
+
+{% block content %}
+{% include 'pnwanderer/_navbar.html' %}
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias molestiae quaerat quia magni accusamus corrupti laboriosam corporis qui quisquam? Natus, aut eum assumenda et at sed? Facere voluptate dolorum odio.</p>
+{% endblock %}
