@@ -1,0 +1,65 @@
+body {
+    background: white url("pictures/background.jpg") no-repeat;
+    background-size: cover;
+
+}
+.blog-photo {
+    display: flex;
+    height: 30rem;
+    align-items: center;
+    border-radius:5%;
+}
+
+.blog-post {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(187, 209, 209, .6);
+    margin-left: 20%;
+    margin-right: 20%;
+    border-radius: 10%;
+    
+}
+
+.banner {
+    display: flex;
+    justify-content: center;
+    font-family: 'Apple Chancery', cursive;
+    font-style: italic
+
+}
+
+
+
+nav {
+    display: flex;
+    justify-content: center;
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+nav img {
+    width: 100px;
+    cursor: pointer;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+
+nav ul li a {
+    margin: 0 1rem;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+nav ul li a:hover {
+    color: #f8f8f6;
+}
