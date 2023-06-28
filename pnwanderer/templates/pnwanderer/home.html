@@ -14,12 +14,12 @@
     {% comment %} add posts to homepage {% endcomment %}
 {% for post in blog_posts %}
 <div class='blog-post'>
-    <h2 class='post-text'>{{ post.title }}</h2>
-    <p class='post-text'>{{ post.content }}</p>
+    <h2 class='detail-link'><a href="{% url 'detail' %}">{{ post.title }}</a></h2>
+    <p>{{ post.content }}</p>
     {% if post.image %}
     <img class='blog-photo' src="{{ post.image.url }}" alt="{{post.title}}">
     {% endif %}
-    <p class='post-text'>{{ post.created_at }}</p>
+    <p>{{ post.created_at }}</p>
 </div>
 {% endfor %}
     
