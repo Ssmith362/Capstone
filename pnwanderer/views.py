@@ -3,7 +3,7 @@ from . models import BlogPost
 
 def home(request):
 
-    blog_posts = BlogPost.objects.all()
+    blog_posts = BlogPost.objects.all().order_by('-id')
     context = {'blog_posts': blog_posts}
     return render(request, 'pnwanderer/home.html', context)
 
