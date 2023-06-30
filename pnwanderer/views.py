@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from . models import BlogPost
 
 def home(request):
@@ -10,5 +10,8 @@ def home(request):
 def about_me(request):
     return render(request, 'pnwanderer/aboutme.html')
 
-def detail(request):
-    return render(request, 'pnwanderer/detail.html')
+def detail(request, BlogPost_id):
+    detailed_post = get_object_or_404(BlogPost, pk=BlogPost_id)
+    context = {'detailed_post': detailed_post}
+    print('Detailed post', detailed_post.images.all())
+    return render(request, 'pnwanderer/detail.html', context)

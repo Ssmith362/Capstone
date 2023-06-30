@@ -1,9 +1,25 @@
 {% extends 'pnwanderer/base.html' %}
 
 {% block title %}
-Details
+{{detailed_post.title}}
 {% endblock %}
 
 {% block content %}
+<h1 class='banner'>PNWanderer</h1>
 {% include 'pnwanderer/_navbar.html' %}
+   
+
+<div class='blog-post'>
+    <h2>{{ detailed_post.title }}</h2>
+    <p>{{ detailed_post.full_description }}</p>
+
+
+    {% for photo in detailed_post.images.all %}
+     <img class='blog-photo' src="{{ photo.images.url }}" alt="{{photo.images.name}}">
+    {% endfor %}
+
+    
+</div>
+
+
 {% endblock %}
