@@ -7,6 +7,7 @@
 {% block content %}
 <h1 class='banner'>PNWanderer</h1>
 {% include 'pnwanderer/_navbar.html' %}
+
    
 
 <div class='blog-post'>
@@ -21,5 +22,27 @@
     
 </div>
 
+<hr/>
+<div class='comments'>
+        <h3>Add Comment</h3>
+        <form method="post" action="">
+            {% csrf_token %}
+            {{ comment_form.as_p }}
+            <button type="submit" class="btn btn-primary">Comment</button>
+        </form>
+
+    
+        {% with comments.count as total_comments %}
+            <h3 class="mt-5">
+                {{ total_comments }} comment{{ total_comments|pluralize }}
+            </h3>
+        {% endwith %}
+
+       
+            {% for comment in detailed_post.get_comments %}
+                {% include 'pnwanderer/comment.html' with comment=comment %}
+            {% endfor %}
+        
+</div>
 
 {% endblock %}

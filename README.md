@@ -18,11 +18,11 @@ The project is going to be an adventure blog with a django based framework. Some
 
 USER EXPERIENCE 
 
-As a user I want to be able to find new trails and advice to make my adventures better.
+As a user I want to be able to find new trails and advice to make their adventures better.
 
 User tasks:
 -Find information on new trails.
--Feel better prepared about what I need to best enjoy my adventure.
+-Feel better prepared about what I posts so they can go back and look at their favorite ones.
 
 DATA MODELS
 
@@ -35,9 +35,10 @@ TIME LINE FOR PROJECT
 
 -By the end of week two I would like to have a page for an about me. 
 I would like to have posts on my blogs that have links to take you to pages that tell you more about the hikes.
-I would like users to be able to comment or save a post. 
+I would like users to be able to comment on posts.
 
 -By week three 
+I would like a page for the specific user so they can view saved posts.
 I would like everything to be styled to look nice. 
 
 -By week four I would like to have a search bar to look for hikes. 
@@ -57,16 +58,16 @@ Nice to haves
 
 - A map on every page that tells you about a hike.
 - a link to a trail map. 
+- Being able to login and save posts.
 
 
 Really great to haves 
 
 - Weather conditions report for the area
 - A search bar to search for a post
-- Being able to login and save posts.
+- Linking trails with a trail map.
 
 
-- Linking trails ive done with a trail map.
 
 
 
