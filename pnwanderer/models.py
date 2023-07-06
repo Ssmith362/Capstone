@@ -9,6 +9,7 @@ class BlogPost(models.Model):
     summary = models.TextField(max_length=2000)
     full_description = models.TextField(blank=True, null=True)
     created_at = models.DateTimeField(auto_now_add=True)
+    favorites = models.ManyToManyField(User, related_name='favorite', default=None, blank=True)
     def get_absolute_url(self):
         return reverse("detail", kwargs={"BlogPost_id": self.pk})
     

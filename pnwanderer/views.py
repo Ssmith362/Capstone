@@ -14,6 +14,10 @@ def about_me(request):
 
 def detail(request, BlogPost_id):
     detailed_post = get_object_or_404(BlogPost, pk=BlogPost_id)
+
+    fav = bool
+    if detailed_post.favorites.filter(id=request.user.id).exists():
+        fav=True
             
     # List of active comments for this post
     comments = detailed_post.comments.filter(active=True)
@@ -36,7 +40,7 @@ def detail(request, BlogPost_id):
         else:
             comment_form = CommentForm()
     
-    return render(request, 'pnwanderer/detail.html', {'detailed_post': detailed_post,'comments': comments,'comment_form':comment_form})
+    return render(request, 'pnwanderer/detail.html', {'detailed_post': detailed_post,'comments': comments,'comment_form':comment_form, 'fav':fav})
 
 
 def reply_page(request):

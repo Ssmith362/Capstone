@@ -1,0 +1,22 @@
+{% extends 'pnwanderer/base.html' %}
+
+{% block title %}
+{{user.username}}
+{% endblock %}
+
+{% block content %}
+{% include 'pnwanderer/_navbar.html' %}
+<h1>Welcome: {{user.username}}</h1>
+
+{% for post in new %}
+<div class='blog-post'>
+    <h2 class='detail-link'><a href="{% url 'detail' post.id %}">{{ post.title }}</a></h2>
+    <p>{{ post.summary }}</p>
+    {% if post.image %}
+    <img class='blog-photo' src="{{ post.image.url }}" alt="{{post.title}}">
+    {% endif %}
+    <p>{{ post.created_at }}</p>
+</div>
+    <a href="{% url 'favorite_add' post.id %}">Remove</a>
+{% endfor %}
+{% endblock %}
