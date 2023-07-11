@@ -14,15 +14,15 @@
     {% if request.user.is_authenticated %}
     <a href="{% url 'favorite_add' detailed_post.id %}" >Add to favorites</a>
     {% endif %}
-    <p>{{ detailed_post.full_description }}</p>
+    <p class='post-text'>{{ detailed_post.full_description }}</p>
 
 
     {% for photo in detailed_post.images.all %}
      <img class='blog-photo' src="{{ photo.images.url }}" alt="{{photo.images.name}}">
-    {% endfor %}
+     {% endfor %}
+    </div>
 
     
-</div>
 
 <hr/>
 <div class='comments'>
