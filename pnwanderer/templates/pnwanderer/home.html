@@ -13,7 +13,7 @@ PNWanderer
 {% for post in blog_posts %}
 <div class='blog-post'>
     <h2 class='detail-link'><a href="{% url 'detail' post.id %}">{{ post.title }}</a></h2>
-    <p>{{ post.summary }}</p>
+    <p class='post-text'>{{ post.summary }}</p>
     {% if post.image %}
     <img class='blog-photo' src="{{ post.image.url }}" alt="{{post.title}}">
     {% endif %}

@@ -1,10 +1,14 @@
 {% extends 'pnwanderer/base.html' %}
 
 {% block title %}
-Aboiut Me
+About Me
 {% endblock %}
-
 {% block content %}
+<h1 class='banner'>PNWanderer</h1>
 {% include 'pnwanderer/_navbar.html' %}
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias molestiae quaerat quia magni accusamus corrupti laboriosam corporis qui quisquam? Natus, aut eum assumenda et at sed? Facere voluptate dolorum odio.</p>
+<div class='about-me'>
+<h1>About Me</h1>
+<img src="capstone/featured_image/about_me_photo" alt="Photo of Spencer">
+<p class='post-text'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias molestiae quaerat quia magni accusamus corrupti laboriosam corporis qui quisquam? Natus, aut eum assumenda et at sed? Facere voluptate dolorum odio.</p>
+</div>
 {% endblock %}
