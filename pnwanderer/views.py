@@ -1,6 +1,8 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from . models import BlogPost, Comment
 from .forms import CommentForm
+import requests, math
+
 
 
 def home(request):
@@ -14,6 +16,21 @@ def about_me(request):
 
 def detail(request, BlogPost_id):
     detailed_post = get_object_or_404(BlogPost, pk=BlogPost_id)
+    
+
+    location = detailed_post.lat + ',' + detailed_post.long
+
+    get_weather = f"http://api.weatherstack.com/forecast?access_key=a84722bc00de8a28621386d7a4f6bbad&query={location}&current"
+    weather = requests.get(get_weather).json()
+    current_temperature = weather['current']['temperature']
+    temperature_fehrenheit = (1.8 * current_temperature) + 32
+
+    weather_icon = weather['current']['weather_icons']
+    weather_description = weather['current']['weather_descriptions'][0]
+
+
+    
+
 
     fav = bool
     if detailed_post.favorites.filter(id=request.user.id).exists():
@@ -40,7 +57,7 @@ def detail(request, BlogPost_id):
         else:
             comment_form = CommentForm()
     
-    return render(request, 'pnwanderer/detail.html', {'detailed_post': detailed_post,'comments': comments,'comment_form':comment_form, 'fav':fav})
+    return render(request, 'pnwanderer/detail.html', {'detailed_post': detailed_post,'comments': comments,'comment_form':comment_form, 'fav':fav, 'weather': weather, 'temperature_fehrenheit':temperature_fehrenheit, 'weather_description': weather_description})
 
 
 def reply_page(request):
