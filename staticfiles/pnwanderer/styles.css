@@ -1,0 +1,156 @@
+body {
+    background: white url("pictures/background.jpg") no-repeat;
+    background-size: cover;
+    max-height: 100vh;
+    margin: 0;
+    
+}
+
+.bg {
+    background: white url("pictures/background.jpg") no-repeat;
+    background-size: cover;
+    max-height: 100vh;
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+
+}
+
+.login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(187, 209, 209, .6);
+    margin-left: 25%;
+    margin-right: 25%;
+    border-radius: 10%;
+}
+
+.signup {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(187, 209, 209, .6);
+    margin-left: 25%;
+    margin-right: 25%;
+    border-radius: 10%;
+}
+.about-me {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(187, 209, 209, .6);
+    margin-left: 25%;
+    margin-right: 25%;
+    border-radius: 10%;
+}
+
+.post-text {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    text-align: center;
+}
+
+.blog-photo {
+    display: flex;
+    height: auto;
+    width: 25rem;
+    align-items: center;
+    border-radius:5%;
+    margin-bottom: 10px;
+}
+
+.blog-post {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(187, 209, 209, .6);
+    margin-left: 25%;
+    margin-right: 25%;
+    border-radius: 10%;
+    margin-bottom: 20px;
+    text-align: center;
+    
+
+    
+}
+
+.banner {
+    display: flex;
+    justify-content: center;
+    font-family: 'Apple Chancery', cursive;
+    font-style: italic
+
+}
+
+.comments {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(187, 209, 209, .6);
+    margin-left: 25%;
+    margin-right: 25%;
+    border-radius: 10%;
+
+}
+
+.detail-link {
+    cursor: pointer;
+
+}
+
+.detail-link a:hover {
+    color: white;
+  }
+
+a:visited {
+    color:black;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: center;
+    padding: 1rem 2rem;
+    /* position: sticky; */
+    top: 0;
+    z-index: 999;
+    background-color: rgba(187, 209, 209, .6);
+    margin-bottom: 20px;
+
+
+}
+
+nav img {
+    width: 100px;
+    cursor: pointer;
+    text-decoration: none;
+    list-style: none;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    padding-left: 0px;
+}
+
+nav ul li a {
+    margin-left: auto;
+    margin-right: auto;
+    margin: 0 1rem;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    border: 1px solid rgb(59, 57, 57);
+    font-size: 1.1rem;
+    background-color: #5AA6D8;
+    padding: 6px;
+    border-radius: 10%
+    
+    
+}
+
+nav ul li a:hover {
+    color: #f7f5ef;
+}
