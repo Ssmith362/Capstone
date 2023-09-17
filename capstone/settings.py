@@ -28,6 +28,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'featured_image')
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
+# Secret key should be kept in a private location, but i didnt do this for the demo
 SECRET_KEY = 'django-insecure-a)p-z3m#%0vcb&thu4jezob8lp0@ws-w6+gxuj4cwpna#$$nna'
 
 # SECURITY WARNING: don't run with debug turned on in production!
